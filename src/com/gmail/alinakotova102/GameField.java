@@ -2,6 +2,7 @@ package com.gmail.alinakotova102;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.Random;
 
 public class GameField extends JPanel {
 
@@ -36,6 +37,11 @@ public class GameField extends JPanel {
         timer = new Timer(250, this);
         timer.start();
         createApple();
+    }
+
+    private void createApple() {
+        appleX = new Random().nextInt(20) * DOT_SIZE;
+        appleY = new Random().nextInt(20) * DOT_SIZE;
     }
 
     public void loadImages() {
