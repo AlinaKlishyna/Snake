@@ -27,6 +27,17 @@ public class GameField extends JPanel {
         loadImages();
     }
 
+    public void initGame() {
+        dots = 3;
+        for (int i = 0; i < dots; i++) {
+            x[i] = 48 - i * DOT_SIZE;
+            y[i] = 48;
+        }
+        timer = new Timer(250, this);
+        timer.start();
+        createApple();
+    }
+
     public void loadImages() {
         ImageIcon appleIcon = new ImageIcon("apple.png");
         apple = appleIcon.getImage();
