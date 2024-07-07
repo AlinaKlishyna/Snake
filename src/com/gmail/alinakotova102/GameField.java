@@ -24,6 +24,14 @@ public class GameField extends JPanel {
 
     public GameField() {
         setBackground(Color.LIGHT_GRAY);
+        loadImages();
     }
 
+    public void loadImages() {
+        ImageIcon appleIcon = new ImageIcon("apple.png");
+        apple = appleIcon.getImage();
+
+        ImageIcon dotIcon = new ImageIcon("dot.png");
+        dot = dotIcon.getImage();
+    }
 }
